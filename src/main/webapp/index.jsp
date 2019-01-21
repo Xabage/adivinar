@@ -12,7 +12,7 @@
 	<h1>El Ahorcado</h1>
 	
 	
-	<div id ="ahorcado" class="container">
+	<div id ="ahorcado" class="container fallo${intento}">
 	</div>
 	
 	
@@ -26,7 +26,7 @@
 </form>
 
 <p>${mensaje}</p> 
-<p class = "fallo${intento}">Intento: ${intento} de 7</p>
+<p>Intento: ${intento} de 7</p>
 
 </section>
 		
