@@ -19,10 +19,29 @@ section{
     background-position-x: 0;
 }
 
+
 .fallo1{
-    background-position-x: 300px;
+    background-position-x: -241px;
+}
+
+.fallo2{
+    background-position-x: -482px;
+}
+
+.fallo3{
+    background-position-x: 0;
+}
+.fallo4{
+    background-position-x: 0;
+}
+.fallo5{
+    background-position-x: 0;
 }
 
 .fallo6{
     background-position-x: 476px;
+}
+
+.fallo7{
+    background-position-x: 0;
 }
