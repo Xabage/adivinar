@@ -15,7 +15,7 @@ public class AdivinarController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	private int count = 0;
-	private int count_max = 6;
+	private int count_max = 7;
        
     
 	/**
@@ -41,8 +41,12 @@ public class AdivinarController extends HttpServlet {
 		}else {
 			request.setAttribute("mensaje", "Has fallado");
 			request.setAttribute("nombre", nombre);
-			count ++;
-			request.setAttribute("intento", count);
+			if(count != count_max) {
+				count ++;
+				request.setAttribute("intento", count);
+			}else
+				request.setAttribute("mensaje", "has perdido");
+			
 			request.getRequestDispatcher("index.jsp").forward(request, response);
 			
 		}

@@ -26,7 +26,7 @@
 </form>
 
 <p>${mensaje}</p> 
-<p>Intento: ${intento} de 7</p>
+<p class = "fallo${intento}">Intento: ${intento} de 7</p>
 
 </section>
 		
