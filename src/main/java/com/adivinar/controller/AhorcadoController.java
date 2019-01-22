@@ -16,8 +16,7 @@ public class AhorcadoController extends HttpServlet {
 	
 	private int count = 0;
 	private int count_max = 7;
-	public char letra;
-	public String nombre;
+	
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
@@ -26,6 +25,21 @@ public class AhorcadoController extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		String letra = request.getParameter("Q");
+		if(letra.equals("Q")) {
+			request.setAttribute("Q", letra);
+			request.getRequestDispatcher("version2.jsp").forward(request, response);
+		}else {
+			request.setAttribute("mensaje", "Has fallado");
+		
+			if(count != count_max) {
+				count ++;
+				request.setAttribute("intento", count);
+			}else
+				request.setAttribute("mensaje", "has perdido");
+			
+			request.getRequestDispatcher("version2.jsp").forward(request, response);
+		}
 	}
 
 }

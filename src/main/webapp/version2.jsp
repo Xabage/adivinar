@@ -20,28 +20,38 @@
 		<form>
 		<div class="row">
 			<div class="input-group col-sm-2">
-				<input type="text" class="form-control" id="demo" name="l1">
+				<input type="text" class="form-control" id="demo" name="l1" value="${Q}">
 				<input type="text" class="form-control" id="demo" name="l2">
 				<input type="text" class="form-control" id="demo" name="l3">
-				<input type="text" class="form-control" id="demo" name="l4">
+				<input type="text" class="form-control" id="demo" name="l4" value="${Q}">
 				<input type="text" class="form-control" id="demo" name="l5">
 				<input type="text" class="form-control" id="demo" name="l6">
 			</div>
 		</div>	
 		<br>
 		</form>
-		
-		<div class="btn-group">
-			<button type="button" class="btn btn-primary btn-sm">Q</button>
-			<button type="button" class="btn btn-info btn-sm">W</button>
-			<button type="button" class="btn btn-primary btn-sm">E</button>
-			<button type="button" class="btn btn-info btn-sm">R</button>
-			<button type="button" class="btn btn-primary btn-sm">T</button>
-			<button type="button" class="btn btn-info btn-sm">Y</button>
-			<button type="button" class="btn btn-primary btn-sm">U</button>
-			<button type="button" class="btn btn-info btn-sm">I</button>
-			<button type="button" class="btn btn-primary btn-sm">O</button>
-			<button type="button" class="btn btn-info btn-sm">P</button>
+		<form action="ahorcado" method="post">
+		<div class="btn-group" >
+			<input type="hidden" name="letra" value="Q">
+			<button type="submit" class="btn btn-primary btn-sm">Q</button>
+			<input type="hidden" name="letra" value="W">
+			<button type="submit" class="btn btn-info btn-sm">W</button>
+			<input type="hidden" name="letra" value="E">
+			<button type="submit" class="btn btn-primary btn-sm">E</button>
+			<input type="hidden" name="letra" value="R">
+			<button type="submit" class="btn btn-info btn-sm">R</button>
+			<input type="hidden" name="letra" value="T">
+			<button type="submit" class="btn btn-primary btn-sm">T</button>
+			<input type="hidden" name="letra" value="Y">
+			<button type="submit" class="btn btn-info btn-sm">Y</button>
+			<input type="hidden" name="letra" value="U">
+			<button type="submit" class="btn btn-primary btn-sm">U</button>
+			<input type="hidden" name="letra" value="I">
+			<button type="submit" class="btn btn-info btn-sm">I</button>
+			<input type="hidden" name="letra" value="O">
+			<button type="submit" class="btn btn-primary btn-sm">O</button>
+			<input type="hidden" name="letra" value="P">
+			<button type="submit" class="btn btn-info btn-sm">P</button>
 		</div>
 		<br>
 		<div class="btn-group">
@@ -65,7 +75,7 @@
 			<button type="button" class="btn btn-info btn-sm">N</button>
 			<button type="button" class="btn btn-primary btn-sm">M</button>
 		</div>
-
+</form>
 		<p>${mensaje}</p>
 		<p>Intento: ${intento} de 7</p>
 		<br> <br>
