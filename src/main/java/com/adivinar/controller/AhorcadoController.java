@@ -16,6 +16,8 @@ public class AhorcadoController extends HttpServlet {
 	
 	private int count = 0;
 	private int count_max = 7;
+	public char letra;
+	public String nombre;
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);

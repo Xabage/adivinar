@@ -20,13 +20,16 @@
 	<form action="adivinar" method="post">
 	<div class="form-group">
 	<label for="nombre">Introduce  una palabra: </label><br><br>
-	<input type="text" name="nombre" value="${nombre}"  placeholder="nombre de 5 letras">
+	<input type="text" name="nombre" value="${nombre}"  placeholder="nombre de 6 letras">
 	<input type="submit" alt="Adivina" class="btn btn-primary" onclick="clickCounter1();">
 	</div>
 </form>
 
 <p>${mensaje}</p> 
 <p>Intento: ${intento} de 7</p>
+<br>
+<br>
+<p><a href="version2.jsp" >Version 2.0</a></p>
 
 </section>
 		
