@@ -20,10 +20,10 @@
 		<form>
 		<div class="row">
 			<div class="input-group col-sm-2">
-				<input type="text" class="form-control" id="demo" name="l1" value="${Q}">
+				<input type="text" class="form-control" id="demo" name="l1" value="${Qu}">
 				<input type="text" class="form-control" id="demo" name="l2">
 				<input type="text" class="form-control" id="demo" name="l3">
-				<input type="text" class="form-control" id="demo" name="l4" value="${Q}">
+				<input type="text" class="form-control" id="demo" name="l4" value="${Qu}">
 				<input type="text" class="form-control" id="demo" name="l5">
 				<input type="text" class="form-control" id="demo" name="l6">
 			</div>
@@ -33,7 +33,7 @@
 		<form action="ahorcado" method="post">
 		<div class="btn-group" >
 			<input type="hidden" name="letra" value="Q">
-			<button type="submit" class="btn btn-primary btn-sm">Q</button>
+			<button type="submit" class="btn btn-primary btn-sm" id="l1">Q</button>
 			<input type="hidden" name="letra" value="W">
 			<button type="submit" class="btn btn-info btn-sm">W</button>
 			<input type="hidden" name="letra" value="E">

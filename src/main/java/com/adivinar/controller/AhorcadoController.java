@@ -27,7 +27,7 @@ public class AhorcadoController extends HttpServlet {
 		
 		String letra = request.getParameter("Q");
 		if(letra.equals("Q")) {
-			request.setAttribute("Q", letra);
+			request.setAttribute("Qu", letra);
 			request.getRequestDispatcher("version2.jsp").forward(request, response);
 		}else {
 			request.setAttribute("mensaje", "Has fallado");

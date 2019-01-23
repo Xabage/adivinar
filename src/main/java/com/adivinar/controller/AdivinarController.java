@@ -13,42 +13,51 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/adivinar")
 public class AdivinarController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+
 	private int count = 0;
 	private int count_max = 7;
-       
-    
+
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		doPost(request, response);
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		String nombre = request.getParameter("nombre");
-		
-		if(nombre.equals("manolo")) {
-		
+
+		if (nombre.equals("manolo")) {
+
 			request.setAttribute("mensaje", "Has acertado");
 			request.setAttribute("nombre", nombre);
 			request.getRequestDispatcher("index.jsp").forward(request, response);
-			
-		}else {
+
+		} else {
 			request.setAttribute("mensaje", "Has fallado");
 			request.setAttribute("nombre", nombre);
-			if(count != count_max) {
-				count ++;
+			if (count != count_max) {
+				count++;
 				request.setAttribute("intento", count);
-			}else
+			} else if (count == count_max) {
 				request.setAttribute("mensaje", "has perdido");
+			}else {
+				count = 0;
+				count_max=0;
+			}
+
 			
+
 			request.getRequestDispatcher("index.jsp").forward(request, response);
-			
+
 		}
 	}
 
